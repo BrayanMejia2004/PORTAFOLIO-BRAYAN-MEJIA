@@ -1,10 +1,34 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Bagde.astro";
 ---
 
 <Layout title="Portafolio Brayan Mejia">
-	<main>
-		<h1>portafolio</h1>
-	</main>
-</Layout>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-10">
+      <img
+        class="rounded-full w-40 h-40 mb-10 bg-indigo-500 shadow-lg hover:shadow-blue-700 cursor-pointer transition-all duration-200 ease-in-out"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrfPPRXXZNIfaEz0so9d9iKVE8ndyoS7-YbZOxegYZ3A&s"
+        alt="Logo foto"
+      />
 
+      <h1 class="text-5xl flex flex-row gap-x-4 pb-5">
+        Hola,<span class="text-blue-800 font-bold">soy Brayan</span>
+        <a
+          href="https://www.linkedin.com/in/brayan-mejia22/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para Trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl opacity-80">
+        <strong class="text-blue-950">
+          Tecnólogo en Desarrollo de Sistemas Informatico
+        </strong>
+        de Bucaramanga, Colombia. Amante al Desarrollo de Aplicaciones Web.
+      </h2>
+    </section>
+  </main>
+</Layout>
