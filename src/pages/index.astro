@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Bagde.astro";
+import Linkedin from "../components/Icons/Linkedin.astro";
+import GitHub from "../components/Icons/GitHub.astro";
+import Email from "../components/Icons/Email.astro";
+import SocialIcon from "../components/Icons/SocialIcon.astro";
 ---
 
 <Layout title="Portafolio Brayan Mejia">
@@ -23,12 +27,31 @@ import Badge from "../components/Bagde.astro";
           <Badge>Disponible para Trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl opacity-80">
+      <h2 class="text-xl opacity-80 text-wrap">
         <strong class="text-blue-950">
           Tecnólogo en Desarrollo de Sistemas Informatico
         </strong>
         de Bucaramanga, Colombia. Amante al Desarrollo de Aplicaciones Web.
       </h2>
+
+      <ul>
+        <li>
+          <SocialIcon url="https://www.linkedin.com/in/brayan-mejia22/">
+            <Linkedin/>
+            LinkedIn
+          </SocialIcon>
+
+          <SocialIcon url="https://github.com/BrayanMejia2004">
+            <GitHub />
+            GitHub
+          </SocialIcon>
+
+          <SocialIcon url="">
+            <Email />
+            Contactame
+          </SocialIcon>
+        </li>
+      </ul>
     </section>
   </main>
 </Layout>
