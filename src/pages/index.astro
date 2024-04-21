@@ -8,13 +8,14 @@ import SocialIcon from "../components/Icons/SocialIcon.astro";
 import ExperienceIcon from "../components/Icons/ExperienceIcon.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import ProjectIcon from "../components/Icons/ProjectIcon.astro";
 ---
 
 <Layout
   title="Portafolio Brayan Mejia - Tecnólogo, Programador y Desarrollador de Aplicaciones Web"
 >
   <main>
-    <SectionContainer>
+    <SectionContainer id='Inicio"'>
       <img
         class="rounded-full w-40 h-40 mb-10 bg-indigo-500 shadow-lg hover:shadow-blue-700 cursor-pointer transition-all duration-200 ease-in-out"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrfPPRXXZNIfaEz0so9d9iKVE8ndyoS7-YbZOxegYZ3A&s"
@@ -59,12 +60,22 @@ import SectionContainer from "../components/SectionContainer.astro";
       </ul>
     </SectionContainer>
 
-    <SectionContainer>
-      <h2 class="ml-10 text-2xl font-semibold flex gap-x-2 items-center text-blue-900">
+    <SectionContainer id="Experiencia" class="my-40">
+      <h2
+        class="ml-10 text-2xl font-semibold flex gap-x-2 items-center text-blue-900"
+      >
         <ExperienceIcon class="size-7" />
         Experiencia Laboral
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="Proyectos" class="my-40">
+      <h2
+        class="ml-10 text-2xl font-semibold flex gap-x-2 items-center text-blue-900">
+        <ProjectIcon class="size-7" />
+        Proyectos
+      </h2>      
     </SectionContainer>
   </main>
 </Layout>
