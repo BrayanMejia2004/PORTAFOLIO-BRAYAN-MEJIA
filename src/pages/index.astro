@@ -6,13 +6,15 @@ import GitHub from "../components/Icons/GitHub.astro";
 import Email from "../components/Icons/Email.astro";
 import SocialIcon from "../components/Icons/SocialIcon.astro";
 import ExperienceIcon from "../components/Icons/ExperienceIcon.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
 <Layout
   title="Portafolio Brayan Mejia - Tecnólogo, Programador y Desarrollador de Aplicaciones Web"
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto">
+    <SectionContainer>
       <img
         class="rounded-full w-40 h-40 mb-10 bg-indigo-500 shadow-lg hover:shadow-blue-700 cursor-pointer transition-all duration-200 ease-in-out"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrfPPRXXZNIfaEz0so9d9iKVE8ndyoS7-YbZOxegYZ3A&s"
@@ -20,7 +22,7 @@ import ExperienceIcon from "../components/Icons/ExperienceIcon.astro";
       />
 
       <h1 class="text-5xl flex flex-row gap-x-4 pb-5">
-        Hola,<span class="text-blue-800 font-bold">soy Brayan</span>
+        Hola,<span class="text-blue-800 font-bold">Soy Brayan</span>
         <a
           href="https://www.linkedin.com/in/brayan-mejia22/"
           target="_blank"
@@ -38,7 +40,7 @@ import ExperienceIcon from "../components/Icons/ExperienceIcon.astro";
       </h2>
 
       <ul>
-        <li class="flex mt-7 text-center items-center justify-center gap-5">
+        <li class="flex mt-8 text-center items-center justify-center gap-5">
           <SocialIcon url="https://www.linkedin.com/in/brayan-mejia22/">
             <Linkedin />
             LinkedIn
@@ -55,11 +57,14 @@ import ExperienceIcon from "../components/Icons/ExperienceIcon.astro";
           </SocialIcon>
         </li>
       </ul>
-    </section>
+    </SectionContainer>
 
-    <section>
-      <ExperienceIcon />      
-      <h2>Experiencia Laboral</h2>
-    </section>
+    <SectionContainer>
+      <h2 class="ml-10 text-2xl font-semibold flex gap-x-2 items-center text-blue-900">
+        <ExperienceIcon class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>

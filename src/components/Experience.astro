@@ -1,10 +1,22 @@
 ---
+import ExperienceItems from "../components/ExperienceItems.astro";
+
 const EXPERIENCE = [
   {
     date: "Enero 2020 - Junio 2024",
     title: "Tecnólogo En Desarrollo De Sistemas Informáticos",
-    descripcion:
-      "Graduado de la Universidad Unidades Tecnólogicas de santander, en donde me dio la oportunidad de adquirir grandes conocimientos sobre la programas, y el gusto por Diseño Web."
+    description:
+      "Graduado de la Universidad Unidades Tecnólogicas de santander, en donde me dio la oportunidad de adquirir grandes conocimientos sobre la programación, y el gusto por Diseño Web.",
   }
 ];
 ---
+
+<ol class="relative my-10">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-5 ms-4">
+        <ExperienceItems {... experience}/>
+      </li>
+    ))
+  }
+</ol>
