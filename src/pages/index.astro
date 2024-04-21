@@ -9,6 +9,7 @@ import ExperienceIcon from "../components/Icons/ExperienceIcon.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import ProjectIcon from "../components/Icons/ProjectIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -22,7 +23,9 @@ import ProjectIcon from "../components/Icons/ProjectIcon.astro";
         alt="Logo foto"
       />
 
-      <h1 class=" text-3xl md:text-4xl xl:text-5xl flex flex-row gap-x-4 pb-6 lg:pb-5">
+      <h1
+        class="text-3xl md:text-4xl xl:text-5xl flex flex-row gap-x-4 pb-6 lg:pb-5"
+      >
         Hola,<span class="text-blue-800 font-bold">Soy Brayan</span>
         <a
           href="https://www.linkedin.com/in/brayan-mejia22/"
@@ -33,7 +36,9 @@ import ProjectIcon from "../components/Icons/ProjectIcon.astro";
           <Badge>Disponible para Trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl lg:text-xl opacity-80 text-wrap text-justify max-w-[700px]">
+      <h2
+        class="text-xl lg:text-xl opacity-80 text-wrap text-justify max-w-[700px]"
+      >
         <strong class="text-blue-950">
           Tecnólogo en Desarrollo de Sistemas Informatico
         </strong>
@@ -62,7 +67,7 @@ import ProjectIcon from "../components/Icons/ProjectIcon.astro";
 
     <SectionContainer id="Experiencia" class="my-40">
       <h2
-        class="ml-10 text-2xl font-semibold flex gap-x-2 items-center text-blue-900"
+        class="ml-10 text-3xl font-semibold flex gap-x-2 items-center text-blue-900"
       >
         <ExperienceIcon class="size-7" />
         Experiencia Laboral
@@ -72,10 +77,12 @@ import ProjectIcon from "../components/Icons/ProjectIcon.astro";
 
     <SectionContainer id="Proyectos" class="my-40">
       <h2
-        class="ml-10 text-2xl font-semibold flex gap-x-2 items-center text-blue-900">
+        class="ml-10 text-3xl font-semibold flex gap-x-2 items-center text-blue-900"
+      >
         <ProjectIcon class="size-7" />
         Proyectos
-      </h2>      
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

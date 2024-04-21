@@ -1,0 +1,81 @@
+---
+import Html from "../components/Icons/Html.astro";
+import Css from "../components/Icons/Css.astro";
+import JavaScript from "../components/Icons/JavaScript.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#F9866D] text-black px-5 py-2",
+    icon: Html,
+  },
+
+  CSS: {
+    name: "CSS",
+    class: "bg-[#3498DB] text-black px-5 py-2",
+    icon: Css,
+  },
+
+  JAVASCRIPT: {
+    name: "JAVASCRIPT",
+    class: "bg-[#F9E79F] text-black px-5 py-2",
+    icon: JavaScript,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Proyecto Diseño Biblioteca",
+    descripcion:
+      "Este proyecto consiste en el mejoramiento visual del aplicativo Biblioteca, aplicando buenas practicas en el Fronted.",
+    link: "#",
+    GitHub:
+      "https://github.com/BrayanMejia2004/PROYECTO-BIBLIOTECA-FRONTED.git",
+    image: "/public/project/svglDB.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "Landing Page Mantenimiento",
+    descripcion:
+      "Practica de Landing Page, practica para evaluar mis conocimientos aprendidos.",
+    link: "https://brayanmejia2004.github.io/PRACTICA-DISENO-MANTENIMIENTO/",
+    GitHub:
+      "https://github.com/BrayanMejia2004/PRACTICA-DISENO-MANTENIMIENTO.git",
+    image: "/public/project/svglDMT.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Landing Page Tecnología",
+    descripcion:
+      "Recreación de landing page, que contiene todo lo esencial para que el cliente pueda elegirnos.",
+    link: "https://brayanmejia2004.github.io/PRACTICA-DISENO-TECNOLOGIA/",
+    GitHub: "https://github.com/BrayanMejia2004/PRACTICA-DISENO-TECNOLOGIA.git",
+    image: "/public/project/svglDTN.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, descripcion, tags, image }) => (
+    <article class="my-10">
+      <h3 class="text-2xl font-semibold text-orange-600 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{descripcion}</p>
+      <ul class="flex gap-x-4 flex-row py-10">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-xl text-xs ${tag.class} py-1 px-2 text-center items-center justify-center`}>
+              <tag.icon />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10 "
+        src={image}
+        alt={`Captura del proyecto del ${title}`}
+      />
+    </article>
+  ))
+}
