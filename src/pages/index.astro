@@ -10,6 +10,8 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import ProjectIcon from "../components/Icons/ProjectIcon.astro";
 import Projects from "../components/Projects.astro";
+import Profile from "../components/Icons/Profile.astro";
+import ProfilePersonal from "../components/Profilepersonal.astro";
 ---
 
 <Layout
@@ -83,6 +85,16 @@ import Projects from "../components/Projects.astro";
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="SobreMi" class="my-40">
+      <h2
+        class="ml-10 text-3xl font-semibold flex gap-x-2 items-center text-blue-900 my-14"
+      >
+      <Profile />
+        Sobre Mi        
+      </h2>
+      <ProfilePersonal />
     </SectionContainer>
   </main>
 </Layout>
