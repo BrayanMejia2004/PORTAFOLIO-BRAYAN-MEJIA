@@ -6,6 +6,7 @@ interface Props {
 const { url } = Astro.props;
 ---
 
-<a href={url} target="_blank">
+<a href={url} target="_blank" class="rounded-full flex justify-center
+items-center gap-x-2 py-1 px-1 hover:scale-110 transition">
   <slot />
 </a>
