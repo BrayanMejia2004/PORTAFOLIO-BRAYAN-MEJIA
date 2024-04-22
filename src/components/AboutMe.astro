@@ -3,10 +3,35 @@ const añoActual = new Date().getFullYear();
 const añoNacimiento = 2004;
 const edad = añoActual - añoNacimiento;
 
-const Name = "Brayan Yesid Mejia Ortega"
+const Name = "Brayan Yesid Mejia Ortega";
 ---
 
-<article class="bg-blue-100 p-5 rounded-xl lg:flex gap-x-4">
-    <img src="" alt={Name}>
-  <p>Me llamo Brayan, tengo {edad} años</p>  
+<article
+  class="flex flex-col items-center justify-center gap-8 shadow-xl bg-gray-500/10 p-10 rounded md:flex-row"
+>
+  <img class="rounded-2xl w-80 h-80" src="/public/foto.webp" alt={Name} />
+  <div class="text-justify">
+    <p class="pb-5">
+      Me llamo <sanp class="text-blue-900">Brayan</sanp>, tengo {edad} años y soy
+      de Bucaramanga, Colombia. En este momento me encuentro terminando la <span
+        class="text-orange-700 font-semibold"
+        >Tecnología en Desarrollo De Sistemas Informaticos.</span
+      >
+    </p>
+
+    <p class="pb-5">
+      Donde mi proxima meta es obtener el título de <span
+        class="text-orange-700 font-semibold">Ingeniera En Sistemas.</span
+      >
+    </p>
+
+    <p>
+      Mi enfoque radica en el diseño de la páginas Web donde busco crear
+      experiencias agradables y funcionales para los usuarios. Combino mi
+      <span
+        class="text-orange-700 font-semibold"> creatividad </span> con mis <span
+        class="text-orange-700 font-semibold">habilidades técnicas </span>, brindando asi una experiencia
+      agradable, funcional al usuario.
+    </p>
+  </div>
 </article>
