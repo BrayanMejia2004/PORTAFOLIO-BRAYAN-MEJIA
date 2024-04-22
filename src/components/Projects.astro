@@ -1,10 +1,12 @@
 ---
+
 import Html from "../components/Icons/Html.astro";
 import Css from "../components/Icons/Css.astro";
 import JavaScript from "../components/Icons/JavaScript.astro";
-import LinkButton from "../components/LinkButton.astro"
-import Link from "../components/Icons/Link.astro"
-import GitHubIcon from "../components/Icons/GitHub.astro"
+import LinkButton from "../components/LinkButton.astro";
+import Link from "../components/Icons/Link.astro";
+import GitHubIcon from "../components/Icons/GitHub.astro";
+
 
 const TAGS = {
   HTML: {
@@ -34,7 +36,7 @@ const PROJECTS = [
     link: "#",
     GitHub:
       "https://github.com/BrayanMejia2004/PROYECTO-BIBLIOTECA-FRONTED.git",
-    image: "/public/images/svglDMT.webp",
+    image: "/public/images/svglDB.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
   {
@@ -62,50 +64,51 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16 px-4">
   {
     PROJECTS.map(({ image, title, descripcion, tags, link, GitHub }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl ">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image}  alt="foto"/>
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl ">
+            <img
+              src={image}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              alt="Portada proyecto"
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 my-2`}
-              >
-                <tag.icon />
-                {tag.name }
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800">{title}</h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 my-2`}
+                  >
+                    <tag.icon />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 text-justify">{descripcion}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {GitHub && (
-            <LinkButton href={GitHub}>
-              <GitHubIcon />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link  />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 text-justify">{descripcion}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {GitHub && (
+                <LinkButton href={GitHub}>
+                  <GitHubIcon />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
