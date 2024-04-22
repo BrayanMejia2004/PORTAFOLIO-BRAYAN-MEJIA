@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import fotoAboutMe from "/public/images/foto.jpeg"
+
 const añoActual = new Date().getFullYear();
 const añoNacimiento = 2004;
 const edad = añoActual - añoNacimiento;
@@ -9,7 +12,7 @@ const Name = "Brayan Yesid Mejia Ortega";
 <article
   class="flex flex-col items-center justify-center gap-8 shadow-xl bg-gray-500/10 p-10 rounded md:flex-row"
 >
-  <img class="rounded-2xl w-80 h-80" src="/src/images/foto.jpeg" alt={Name} />
+  <Image class="rounded-2xl w-80 h-80" src={fotoAboutMe} alt={Name} />
   <div class="text-justify">
     <p class="pb-5">
       Me llamo <sanp class="text-blue-900">Brayan</sanp>, tengo {edad} años y soy
@@ -28,10 +31,10 @@ const Name = "Brayan Yesid Mejia Ortega";
     <p>
       Mi enfoque radica en el diseño de la páginas Web donde busco crear
       experiencias agradables y funcionales para los usuarios. Combino mi
-      <span
-        class="text-orange-700 font-semibold"> creatividad </span> con mis <span
-        class="text-orange-700 font-semibold">habilidades técnicas </span>, brindando asi una experiencia
-      agradable, funcional al usuario.
+      <span class="text-orange-700 font-semibold"> creatividad </span> con mis <span
+        class="text-orange-700 font-semibold"
+        >habilidades técnicas
+      </span>, brindando asi una experiencia agradable, funcional al usuario.
     </p>
   </div>
 </article>
