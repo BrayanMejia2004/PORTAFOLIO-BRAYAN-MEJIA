@@ -1,10 +1,66 @@
-<heade class="flex justify-between items-center py-10 w-full lg:w-[1120px] mx-auto">
-    <span />
-  <nav class="flex flex-row gap-x-5 px-8 pb-5 text-center lg:gap-x-10 opacity-80">
-    <a href="#Inicio" class="font-bold text-orange-600 hover:text-blue-950 hover:font-bold transition-all">Inicio</a>
-    <a href="#Experiencia" class="hover:text-blue-950 hover:font-bold transition-all">Experiencia</a>
-    <a href="#Proyectos" class="hover:text-blue-950 hover:font-bold transition-all">Proyectos</a>
-    <a href="#SobreMi" class="hover:text-blue-950 hover:font-bold transition-all">Sobre Mi</a>
-    <a href="mailto:elyesid22@gmail.com" class="hover:text-blue-950 hover:font-bold transition-all">Contacto</a>
+---
+
+const navItems = [
+  {
+    title: "Inicio",
+    label: "Inicio",
+    url: "/#Inicio",
+  },
+  {
+    title: "Experiencia",
+    label: "Experiencia",
+    url: "/#Experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "Proyectos",
+    url: "/#Proyectos",
+  },
+  {
+    title: "Sobre Mi",
+    label: "Sobre Mi",
+    url: "/#SobreMi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:miduga@gmail.com",
+  }
+]
+---
+
+<header
+  class="fixed z-10 flex justify-between items-center py-10 w-full lg:w-[1120px] mx-auto"
+>
+
+<span></span>
+  <nav
+    class="flex flex-row gap-x-5 text-center lg:gap-x-10 opacity-80 ml-20"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition text-blue-950 font-semibold hover:text-orange-600 hover:font-semibold hover:underline"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }    
   </nav>
-</heade>
+</header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-blue-800/10 ring-white/10 rounded-2xl;
+    }
+  }
+</style>
