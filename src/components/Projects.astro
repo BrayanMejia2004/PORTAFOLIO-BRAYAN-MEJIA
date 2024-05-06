@@ -1,12 +1,12 @@
 ---
-
 import Html from "../components/Icons/Html.astro";
 import Css from "../components/Icons/Css.astro";
 import JavaScript from "../components/Icons/JavaScript.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Link from "../components/Icons/Link.astro";
 import GitHubIcon from "../components/Icons/GitHub.astro";
-
+import Astro from "../components/Icons/Astro.astro";
+import Tailwind from "../components/Icons/Tailwind.astro";
 
 const TAGS = {
   HTML: {
@@ -26,9 +26,31 @@ const TAGS = {
     class: "bg-[#F9E79F] text-black px-5 py-2 text-center items-center",
     icon: JavaScript,
   },
+
+  ASTRO: {
+    name: "ASTRO",
+    class: "bg-[#F9E79F] text-black px-5 py-2 text-center items-center",
+    icon: Astro,
+  },
+
+  TAILWIND: {
+    name: "TAILWIND",
+    class: "bg-[#F9E79F] text-black px-5 py-2 text-center items-center",
+    icon: Tailwind,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "Proyecto Pagina Web Papeleria",
+    descripcion:
+      "Proyecto desarrollado en Astro, aplicando estilos con Tailwind para una papeleria y actividad de Universidad",
+    link: "https://papeleriajsandy.netlify.app/",
+    GitHub:
+      "https://github.com/BrayanMejia2004/ProyectoPaginaWebPapeleria-Astro.git",
+    image: "https://i.ibb.co/c8CHqTv/paginapapeleria.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
   {
     title: "Proyecto Diseño Biblioteca",
     descripcion:
